@@ -1,0 +1,367 @@
+.Logo {
+	grid-area: logo;
+	width: 155px;
+	height: 155px;
+	object-fit: cover;
+	justify-self: start;
+}
+
+header {
+	display: grid;
+	grid-template-columns: 1fr auto 1fr;
+	grid-template-areas: "logo title nav";
+	align-items: center;
+	gap: 24px;
+	padding: 14px 5%;
+}
+
+.nomedosite {
+	grid-area: title;
+	margin: 0;
+	color: #000;
+	font-family: Georgia, "Times New Roman", serif;
+	font-size: 1.8rem;
+	text-align: center;
+}
+
+.nomedosite::before,
+.nomedosite::after {
+	color: #6f9e62;
+	font-family: Georgia, "Times New Roman", serif;
+	font-size: 1.1rem;
+	vertical-align: middle;
+}
+
+.nomedosite::before {
+	content: "♥";
+	margin-right: 10px;
+}
+
+.nomedosite::after {
+	content: "♥";
+	margin-left: 10px;
+}
+
+nav {
+	grid-area: nav;
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+	gap: 18px;
+}
+
+nav a {
+	color: #40543a;
+	font-weight: 600;
+	text-decoration: none;
+}
+
+nav a:hover {
+	color: #b8a575;
+}
+
+.Banner {
+	display: block;
+	width: 100%;
+	max-width: none;
+	height: auto;
+	margin: 0;
+}
+
+.destaque {
+	padding: 32px 24px 0;
+	text-align: center;
+}
+
+.sobre-clinica {
+	max-width: 1100px;
+	margin: 48px auto;
+	padding: 0 24px;
+	text-align: center;
+}
+
+.sobre-clinica h2 {
+	margin-bottom: 28px;
+}
+
+.cards-sobre {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+}
+
+.card-sobre {
+	padding: 12px 32px;
+}
+
+.card-sobre + .card-sobre {
+	border-left: 1px solid #c9c9c9;
+}
+
+.simbolo {
+	display: block;
+	color: #40543a;
+	font-size: 2.4rem;
+	line-height: 1;
+	margin-bottom: 14px;
+}
+
+.card-sobre h3 {
+	margin: 0 0 12px;
+	font-size: 1.35rem;
+}
+
+.card-sobre p {
+	margin: 0;
+	line-height: 1.6;
+}
+
+.especializacoes {
+	max-width: 1100px;
+	margin: 48px auto;
+	padding: 0 24px;
+	text-align: center;
+}
+
+.especializacoes h2 {
+	margin-bottom: 28px;
+	color: #40543a;
+	font-family: "Palatino Linotype", "Book Antiqua", Georgia, serif;
+	font-size: 2.4rem;
+	font-style: italic;
+	font-weight: 700;
+}
+
+.cards-especializacoes {
+	display: grid;
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+	border: 0;
+	gap: 16px;
+}
+
+.card-especializacao {
+	padding: 12px 28px 28px;
+	background-color: #fff;
+}
+
+.imagem-especializacao {
+	display: block;
+	width: 100%;
+	height: 180px;
+	margin: 0 auto 14px;
+	object-fit: contain;
+	background-color: #fff;
+}
+
+.card-especializacao:nth-child(4) .imagem-especializacao {
+	filter: contrast(1.5);
+}
+
+.card-especializacao:nth-child(5) .imagem-especializacao {
+	width: 25%;
+}
+
+.card-especializacao:nth-child(n + 3) {
+	padding-top: 28px;
+}
+
+.card-especializacao:nth-child(even) {
+	background-color: #fff;
+}
+
+.card-especializacao:nth-child(3) {
+	grid-column: 1 / -1;
+	justify-self: center;
+	width: 50%;
+}
+
+.card-especializacao h3 {
+	margin: 0 0 12px;
+	color: #40543a;
+	font-size: 1.2rem;
+}
+
+.card-especializacao p {
+	margin: 0;
+	line-height: 1.6;
+}
+
+.contatos {
+	--verde-marca: #40543a;
+	--verde-oliva-claro: #e1e5d7;
+	--verde-oliva-medio: #cbd3bd;
+	--verde-oliva-suave: #d7ddca;
+	--dourado-marca: #b8a575;
+	max-width: 1100px;
+	margin: 48px auto;
+	padding: 0 24px;
+	text-align: center;
+}
+
+.contatos h2 {
+	position: relative;
+	display: inline-block;
+	margin: 0 0 42px;
+	color: var(--verde-marca);
+	font-family: "Century Gothic", "Avenir Next", sans-serif;
+	font-size: 2.2rem;
+	font-weight: 700;
+}
+
+.contatos h2::before,
+.contatos h2::after {
+	position: absolute;
+	top: 50%;
+	width: 72px;
+	height: 2px;
+	content: "";
+	background-color: var(--dourado-marca);
+}
+
+.contatos h2::before {
+	right: calc(100% + 18px);
+}
+
+.contatos h2::after {
+	left: calc(100% + 18px);
+}
+
+.cards-contatos {
+	display: grid;
+	grid-template-columns: repeat(3, minmax(0, 1fr));
+	max-width: 900px;
+	margin: 0 auto;
+	gap: 16px;
+	align-items: stretch;
+}
+
+.card-contato {
+	padding: 20px;
+	min-height: 220px;
+	box-sizing: border-box;
+	background-color: #fff;
+	border: 1px solid #aeb99d;
+	border-radius: 28px 8px 28px 8px;
+}
+
+.card-contato:nth-child(2) {
+	background-color: #fff;
+}
+
+.card-contato:nth-child(3) {
+	background-color: #fff;
+}
+
+.card-contato:nth-child(2) {
+	border-radius: 8px 28px 8px 28px;
+}
+
+.card-contato:nth-child(3) {
+	border-radius: 28px 8px 28px 8px;
+}
+
+.card-contato h3 {
+	margin: 0 0 20px;
+	color: var(--verde-marca);
+	font-size: 1.2rem;
+}
+
+.card-contato p {
+	margin: 14px 0 0;
+	line-height: 1.6;
+}
+
+.simbolo-contato {
+	color: var(--verde-marca);
+	font-size: 1.35rem;
+	margin-right: 8px;
+	vertical-align: middle;
+}
+
+.simbolo-destaque {
+	display: block;
+	margin: 0 0 14px;
+	font-size: 2.5rem;
+}
+
+.card-mapa {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+@media (max-width: 700px) {
+	header {
+	grid-template-columns: 1fr auto 1fr;
+		grid-template-areas:
+			"logo title ."
+			"nav nav nav";
+	}
+
+	nav {
+		width: 100%;
+		justify-content: center;
+		flex-wrap: wrap;
+	}
+
+	.nomedosite {
+		grid-area: title;
+	}
+
+	.Logo {
+		grid-area: logo;
+		width: 70px;
+		height: 70px;
+	}
+
+	.cards-sobre {
+		grid-template-columns: 1fr;
+		gap: 24px;
+	}
+
+	.card-sobre + .card-sobre {
+		border-left: 0;
+		border-top: 1px solid #c9c9c9;
+		padding-top: 28px;
+	}
+
+	.cards-especializacoes {
+		grid-template-columns: 1fr;
+		gap: 24px;
+		border: 0;
+	}
+
+	.card-especializacao,
+	.card-especializacao:nth-child(n + 3),
+	.card-especializacao:nth-child(3) {
+		padding-top: 28px;
+	}
+
+	.card-especializacao:nth-child(3) {
+		grid-column: auto;
+		width: auto;
+	}
+
+	.card-especializacao:first-child {
+		border-top: 0;
+		padding-top: 12px;
+	}
+
+	.cards-contatos {
+		grid-template-columns: 1fr;
+	}
+
+	.contatos h2 {
+		font-size: 2rem;
+	}
+
+	.contatos h2::before,
+	.contatos h2::after {
+		width: 34px;
+	}
+
+	.card-contato:nth-child(3) {
+		border-radius: 28px 8px 28px 8px;
+		min-height: auto;
+	}
+}
