@@ -290,6 +290,19 @@ nav a:hover {
 	justify-content: center;
 }
 
+.rodape {
+	margin-top: 40px;
+	padding: 14px 24px;
+	border-top: 1px solid #cbd3bd;
+	color: #40543a;
+	text-align: center;
+}
+
+.rodape p {
+	margin: 0;
+	font-size: 0.85rem;
+}
+
 @media (max-width: 700px) {
 	header {
 	grid-template-columns: 1fr auto 1fr;
